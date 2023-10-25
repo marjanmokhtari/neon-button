@@ -1,0 +1,226 @@
+@font-face {
+  font-family: font-mono;
+  src: url(font/MartianMono-ExtraLight.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  >a,
+  >a:visited {
+    text-decoration: none;
+  }
+
+  >a {
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:font-mono;
+    font-size: 25px;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+
+    &:nth-child(1) {
+      color: #03e9f4;
+    }
+
+    &:nth-child(2) {
+      color: #03f40b;
+    }
+
+    &:nth-child(3) {
+      color: #ff86ff;
+
+    }
+
+    &:nth-child(1):hover {
+      background-color: #03e9f4;
+      box-shadow: 0px 0px 10px #03e9f4,
+        0px 0px 20px #03e9f4,
+        0px 0px 30px #03e9f4,
+        0px 0px 100px #03e9f4;
+      color: black;
+    }
+
+    &:nth-child(2):hover {
+      background-color: #03f40b;
+      box-shadow: 0px 0px 10px #03f40b,
+        0px 0px 20px #03f40b,
+        0px 0px 30px #03f40b,
+        0px 0px 100px #03f40b;
+      color: black;
+
+    }
+
+    &:nth-child(3):hover {
+      background-color: #ff86ff;
+      box-shadow: 0px 0px 10px #ff86ff,
+        0px 0px 20px #ff86ff,
+        0px 0px 30px #ff86ff,
+        0px 0px 100px #ff86ff;
+      color: black;
+
+    }
+
+    .blue,
+    .green,
+    .pink {
+      &:nth-child(1) {
+        background: linear-gradient(90deg, transparent, #03e9f4)
+      }
+
+      &:nth-child(2) {
+        background: linear-gradient(180deg, transparent, #03e9f4)
+      }
+
+      &:nth-child(3) {
+        background: linear-gradient(270deg, transparent, #03e9f4)
+      }
+
+      &:nth-child(4) {
+        background: linear-gradient(360deg, transparent, #03e9f4)
+      }
+    }
+
+    .green {
+      &:nth-child(1) {
+        background: linear-gradient(90deg, transparent, #03f40b)
+      }
+
+      &:nth-child(2) {
+        background: linear-gradient(180deg, transparent, #03f40b)
+      }
+
+      &:nth-child(3) {
+        background: linear-gradient(270deg, transparent, #03f40b)
+      }
+
+      &:nth-child(4) {
+        background: linear-gradient(360deg, transparent, #03f40b)
+      }
+    }
+
+    .pink {
+      &:nth-child(1) {
+        background: linear-gradient(90deg, transparent, #ff86ff)
+      }
+
+      &:nth-child(2) {
+        background: linear-gradient(180deg, transparent, #ff86ff)
+      }
+
+      &:nth-child(3) {
+        background: linear-gradient(270deg, transparent, #ff86ff)
+      }
+
+      &:nth-child(4) {
+        background: linear-gradient(360deg, transparent, #ff86ff)
+      }
+    }
+
+    >span {
+      position: absolute;
+
+      &:nth-of-type(1) {
+        animation: anime1 linear 1s infinite;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+
+      &:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg);
+        animation: anime2 1s linear infinite;
+        animation-delay: 0.25s;
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+
+        animation: anime3 1s linear infinite;
+        animation-delay: 0.50s;
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        animation: anime4 1s linear infinite;
+        animation-delay: 0.75s;
+      }
+
+
+    }
+
+  }
+
+}
+
+@keyframes anime1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+
+    left: 100%;
+  }
+}
+
+@keyframes anime2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes anime3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes anime4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
